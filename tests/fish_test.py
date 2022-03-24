@@ -7,6 +7,6 @@ class TestFish(unittest.TestCase):
         self.fish_1 = Fish("Nemo")
         self.fish_2 = Fish("Bob")
 
-    def test_fish_has_name(self):
+    def test_fish_have_names(self):
         self.assertEqual("Nemo", self.fish_1.name)
         self.assertEqual("Bob", self.fish_2.name)

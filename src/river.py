@@ -3,7 +3,7 @@ class River:
         self.name = name
         self.contents = []
     
-    def population_check(self):
+    def fish_count(self):
         return len(self.contents)
 
     def lose_fish(self, fish):

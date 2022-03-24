@@ -9,6 +9,9 @@ class TestBear(unittest.TestCase):
 
     def test_bear_has_name(self):
         self.assertEqual("Yogi", self.bear.name)
+    
+    def test_bear_species(self):
+        self.assertEqual("grizzly", self.bear.species)
 
     def test_bear_is_fierce(self):
         self.assertEqual("Miaow", self.bear.roar())
@@ -20,4 +23,4 @@ class TestBear(unittest.TestCase):
     def test_bear_diet(self):
         self.bear.chow_down(Fish("Nemo"))
         self.bear.chow_down(Fish("Bob"))
-        self.assertEqual(2, self.bear.gut_inspector())
+        self.assertEqual(2, self.bear.food_count())

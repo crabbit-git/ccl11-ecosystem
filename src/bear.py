@@ -1,7 +1,7 @@
 class Bear:
-    def __init__(self, name, type):
+    def __init__(self, name, species):
         self.name = name
-        self.type = type
+        self.species = species
         self.stomach = []
 
     def roar(self):
@@ -10,5 +10,5 @@ class Bear:
     def chow_down(self, fish):
         self.stomach.append(fish)
     
-    def gut_inspector(self):
+    def food_count(self):
         return len(self.stomach)
