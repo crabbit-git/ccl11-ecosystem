@@ -10,4 +10,3 @@ class TestFish(unittest.TestCase):
     def test_fish_has_name(self):
         self.assertEqual("Nemo", self.fish_1.name)
         self.assertEqual("Bob", self.fish_2.name)
-        
