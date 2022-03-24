@@ -22,7 +22,7 @@ class TestRiver(unittest.TestCase):
 
     def test_bear_can_eat_fish(self):
         bear = Bear("Rupert", "brown")
-        unlucky_fish = self.river.contents[1]
+        unlucky_fish = self.river.contents[0]
         bear.chow_down(self.river.lose_fish(unlucky_fish))
         self.assertEqual(2, len(self.river.contents))
         self.assertEqual(1, len(bear.stomach))
@@ -30,9 +30,9 @@ class TestRiver(unittest.TestCase):
     def test_bear_is_killing_machine(self):
         bear = Bear("Kuma", "sun")
         buffet = self.river.contents
-        doom_clock = len(buffet) - 1
+        doom_clock = len(buffet)
         while len(buffet) != 0:
-            bear.chow_down(self.river.lose_fish(buffet[doom_clock]))
             doom_clock -= 1
+            bear.chow_down(self.river.lose_fish(buffet[doom_clock]))
         self.assertEqual(0, self.river.fish_count())
         self.assertEqual(3, bear.food_count())
